@@ -1,0 +1,16 @@
+﻿@model List<ResultAboutItemDto>
+
+@*
+    Ui Layout AboutItem Component
+*@
+
+<div class="row g-3">
+    <div class="col-sm-6">
+        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>@Model[0].Title</h6>
+        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>@Model[1].Title</h6>
+    </div>
+    <div class="col-sm-6">
+        <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>@Model[2].Title</h6>
+        <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>@Model[3].Title</h6>
+    </div>
+</div>

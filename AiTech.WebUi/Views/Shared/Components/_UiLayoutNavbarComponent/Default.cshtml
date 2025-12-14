@@ -1,0 +1,42 @@
+﻿
+@*
+   Ui Layout Navbar Component
+*@
+
+<div class="container-fluid sticky-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark p-0">
+            <a href="/AI-html-1.0.0/index.html" class="navbar-brand">
+                <h1 class="text-white">AI<span class="text-dark">.</span>Tech</h1>
+            </a>
+            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto">
+                    <a href="/Default/Index" class="nav-item nav-link active">Ana Sayfa</a>
+                    <a href="#About" class="nav-item nav-link">Hakkımızda</a>
+                    <a href="#Service" class="nav-item nav-link">Hizmetlerimiz</a>
+                    <a href="#Choose" class="nav-item nav-link">Ne Sunuyoruz</a>
+                    <a href="#Project" class="nav-item nav-link">Projelerimiz</a>
+                     
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Daha Fazla</a>
+                        <div class="dropdown-menu bg-light mt-2">
+                            <a href="#Faq" class="dropdown-item">Sık Sorulan Sorular</a>
+                            <a href="#Team"  class="dropdown-item">Takımımız</a>
+                            <a href="#Testimonial"  class="dropdown-item">Referanslarımız</a>
+                            <a href="#Subscribe"  class="dropdown-item">Abone Olun</a>
+                        </div>
+                    </div>
+
+                    <a href="/Contact/Index" class="nav-item nav-link">İletişim</a>
+
+                </div>
+                <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
+                         data-bs-target="#searchModal"><i class="fa fa-search">Sor</i></butaton>
+            </div>
+        </nav>
+    </div>
+</div>

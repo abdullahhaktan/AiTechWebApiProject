@@ -1,0 +1,12 @@
+﻿@model List<ResultSocialDto>
+
+@*
+    Ui Layout Social Component
+*@
+
+<div class="d-flex align-items-center mt-4">
+    <a class="btn btn-outline-primary btn-square me-3" href="@Model[0].Url"><i class="@Model[0].Icon"></i></a>
+    <a class="btn btn-outline-primary btn-square me-3" href="@Model[1].Url"><i class="@Model[1].Icon"></i></a>
+    <a class="btn btn-outline-primary btn-square me-3" href="@Model[2].Url"><i class="@Model[2].Icon"></i></a>
+    <a class="btn btn-outline-primary btn-square me-3" href="@Model[3].Url"><i class="@Model[3].Icon"></i></a>
+</div>

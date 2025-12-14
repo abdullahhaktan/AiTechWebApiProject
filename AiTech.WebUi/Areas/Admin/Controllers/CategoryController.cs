@@ -1,0 +1,47 @@
+﻿using AiTech.WebUi.DTOs.CategoryDtos;
+using AiTech.WebUi.Services.CategoryServices;
+using Microsoft.AspNetCore.Mvc;
+
+namespace AiTech.WebUi.Areas.Admin.Controllers
+{
+    [Area("Admin")]
+    public class CategoryController(ICategoryService _categoryService) : Controller
+    {
+        public async Task<IActionResult> Index()
+        {
+            var categories = await _categoryService.GetAllAsync();
+            return View(categories);
+        }
+
+        public IActionResult CreateCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CreateCategory(CreateCategoryDto createCategoryDto)
+        {
+            await _categoryService.CreateAsync(createCategoryDto);
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> UpdateCategory(int id)
+        {
+            var category = await _categoryService.GetByIdAsync(id);
+            return View(category);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> UpdateCategory(UpdateCategoryDto updateCategoryDto)
+        {
+            await _categoryService.UpdateAsync(updateCategoryDto);
+            return RedirectToAction("Index");
+        }
+
+        public async Task<IActionResult> DeleteCategory(int id)
+        {
+            await _categoryService.DeleteAsync(id);
+            return RedirectToAction("Index");
+        }
+    }
+}

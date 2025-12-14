@@ -1,0 +1,139 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Panel | AiTech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .sidebar {
+            width: 260px;
+            min-height: 100vh;
+            background: #0d6efd;
+        }
+
+            .sidebar a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+                .sidebar a:hover {
+                    background: rgba(255,255,255,0.15);
+                }
+
+            .sidebar .nav-link {
+                padding: 12px 20px;
+                font-weight: 500;
+            }
+
+        .content {
+            width: calc(100% - 260px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="d-flex">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="p-4 text-center border-bottom">
+                <h4 class="fw-bold text-white mb-0">⚙️ Admin Panel</h4>
+                <small class="text-light">AiTech Yönetim</small>
+            </div>
+
+            <nav class="nav flex-column mt-3">
+
+                <a class="nav-link" href="/Admin/About">
+                    <i class="fa fa-user me-2"></i> About
+                </a>
+
+                <a class="nav-link" href="/Admin/AboutItem">
+                    <i class="fa fa-list me-2"></i> About Items
+                </a>
+
+                <a class="nav-link" href="/Admin/Banner">
+                    <i class="fa fa-image me-2"></i> Banner
+                </a>
+
+                <a class="nav-link" href="/Admin/Category">
+                    <i class="fa fa-tags me-2"></i> Categories
+                </a>
+
+                <a class="nav-link" href="/Admin/Choose">
+                    <i class="fa fa-check-circle me-2"></i> Choose
+                </a>
+
+                <a class="nav-link" href="/Admin/Feature">
+                    <i class="fa fa-star me-2"></i> Features
+                </a>
+
+                <a class="nav-link" href="/Admin/Project">
+                    <i class="fa fa-diagram-project me-2"></i> Projects
+                </a>
+
+                <a class="nav-link" href="/Admin/Team">
+                    <i class="fa fa-users me-2"></i> Team
+                </a>
+
+                <a class="nav-link" href="/Admin/Testimonial">
+                    <i class="fa fa-comments me-2"></i> Testimonials
+                </a>
+
+                <a class="nav-link" href="/Admin/FAQ">
+                    <i class="fa fa-question-circle me-2"></i> FAQ
+                </a>
+
+                <a class="nav-link" href="/Admin/Social">
+                    <i class="fa fa-share-nodes me-2"></i> Social Media
+                </a>
+
+                <hr class="text-white mx-3" />
+
+                <a class="nav-link text-warning" href="/">
+                    <i class="fa fa-globe me-2"></i> Siteye Git
+                </a>
+
+            </nav>
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+            <!-- TOP BAR -->
+            <nav class="navbar navbar-light bg-light border-bottom px-4">
+                <span class="navbar-text fw-semibold">
+                    Hoşgeldin 👋 Admin
+                </span>
+                <a href="/Logout" class="btn btn-outline-danger btn-sm">
+                    <i class="fa fa-sign-out-alt"></i> Çıkış
+                </a>
+            </nav>
+
+            <!-- PAGE CONTENT -->
+            <div class="p-4">
+                @RenderBody()
+            </div>
+        </main>
+
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿@model UpdateFaqDto
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-warning text-dark text-center">
+            <h4 class="mb-0 fw-semibold">✏️ SSS Düzenle</h4>
+        </div>
+
+        <div class="card-body p-4">
+            <form method="post">
+                <input type="hidden" asp-for="Id" />
+
+                <div class="mb-3">
+                    <label asp-for="Question" class="form-label fw-semibold">Soru</label>
+                    <input type="text" asp-for="Question" class="form-control" placeholder="Soruyu düzenle" />
+                    <span asp-validation-for="Question" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Answer" class="form-label fw-semibold">Cevap</label>
+                    <textarea asp-for="Answer" class="form-control" placeholder="Cevabı düzenle"></textarea>
+                    <span asp-validation-for="Answer" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary px-4 fw-semibold">
+                        <i class="fa fa-refresh me-1"></i> Güncelle
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

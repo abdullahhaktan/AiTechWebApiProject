@@ -1,0 +1,103 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_UiLayoutHeadComponent")
+
+<body>
+    
+    @await Component.InvokeAsync("_UiLayoutSpinnerComponent")
+
+    @await Component.InvokeAsync("_UiLayoutNavbarComponent")
+
+    @await Component.InvokeAsync("_UiLayoutHeroComponent")
+
+    <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(20, 24, 62, 0.7);">
+                <div class="modal-header border-0">
+                    <button type="button"
+                            class="btn btn-square bg-white btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div style="max-width: 600px; width:100%;">
+
+                        <!-- FORM -->
+                        <form method="post" asp-action="Index" asp-controller="Default">
+                            <label class="text-white mb-2">Prompt Girin:</label>
+
+                            <div class="input-group">
+                                <input type="text"
+                                       name="prompt"
+                                       class="form-control bg-transparent border-light text-white p-3"
+                                       placeholder="Prompt yazın..."
+                                       required />
+
+                                <button type="submit" class="btn btn-light px-4">
+                                    <i class="bi bi-search"></i>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @if (ViewBag.response != null)
+    {
+        <div class="modal fade" id="responseModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+
+                    <div class="modal-header">
+                        <h5 class="modal-title">Gelen Yanıt</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>@ViewBag.response</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Arka plan karartma -->
+        <div class="modal-backdrop fade show"></div>
+    }
+
+
+    <!-- Full Screen Search End -->
+
+    @await Component.InvokeAsync("_UiLayoutAboutComponent")
+
+    @await Component.InvokeAsync("_UiLayoutServiceComponent")
+   
+    @await Component.InvokeAsync("_UiLayoutChooseComponent")
+
+    @await Component.InvokeAsync("_UiLayoutProjectComponent")
+
+    @await Component.InvokeAsync("_UiLayoutFaqComponent")
+
+    @await Component.InvokeAsync("_UiLayoutTeamComponent")
+
+    @await Component.InvokeAsync("_UiLayoutTestimonialComponent")
+
+    @await Component.InvokeAsync("_UiLayoutSubscribeComponent")
+
+    @await Component.InvokeAsync("_UiLayoutFooterComponent")
+
+    @await Component.InvokeAsync("_UiLayoutScriptComponent")
+
+</body>
+
+</html>

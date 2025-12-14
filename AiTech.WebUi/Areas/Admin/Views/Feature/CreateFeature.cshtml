@@ -1,0 +1,34 @@
+﻿@model CreateFeatureDto
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="card shadow border-0">
+    <div class="card-header bg-warning text-dark">
+        <h5 class="mb-0">✏️ Yeni Özellik Ekle</h5>
+    </div>
+
+    <div class="card-body">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label fw-semibold">Başlık</label>
+                <input asp-for="Title" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Icon" class="form-label fw-semibold">Icon</label>
+                <input asp-for="Icon" class="form-control" placeholder="fa fa-star" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label fw-semibold">Açıklama</label>
+                <textarea asp-for="Description" class="form-control"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                <i class="fa fa-save"></i> Kaydet
+            </button>
+        </form>
+    </div>
+</div>

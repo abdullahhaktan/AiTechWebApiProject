@@ -1,0 +1,89 @@
+﻿@model List<ResultTeamDto>
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0 fw-semibold">📋 Ekip Listesi</h4>
+            <a href="/Admin/Team/CreateTeam" class="btn btn-light btn-sm fw-semibold">
+                <i class="fa fa-plus-circle me-1"></i> Yeni Ekip Üyesi Ekle
+            </a>
+        </div>
+
+        <div class="card-body p-4">
+            @if (Model != null && Model.Any())
+            {
+                <table class="table table-striped table-bordered align-middle text-center">
+                    <thead class="table-primary">
+                        <tr>
+                            <th>#</th>
+                            <th>Fotoğraf</th>
+                            <th>Ad Soyad</th>
+                            <th>Ünvan</th>
+                            <th>Sosyal Medya</th>
+                            <th style="width:200px;">İşlemler</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            <tr>
+                                <td>@count</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    {
+                                        <img src="@item.ImageUrl" class="img-thumbnail" style="max-height:70px;" />
+                                    }
+                                </td>
+                                <td>@item.NameSurname</td>
+                                <td>@item.Title</td>
+                                <td>
+                                    @if (!string.IsNullOrEmpty(item.FacebookUrl))
+                                    {
+                                        <a href="@item.FacebookUrl" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(item.TwitterUrl))
+                                    {
+                                        <a href="@item.TwitterUrl" target="_blank" class="mx-1"><i class="fa fa-twitter"></i></a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(item.InstagramUrl))
+                                    {
+                                        <a href="@item.InstagramUrl" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    }
+                                    @if (!string.IsNullOrEmpty(item.LinkedinUrl))
+                                    {
+                                        <a href="@item.LinkedinUrl" target="_blank" class="mx-1"><i class="fa fa-linkedin"></i></a>
+                                    }
+                                </td>
+                                <td>
+                                    <a href="/Admin/Team/UpdateTeam/@item.Id" class="btn btn-warning btn-sm me-2">
+                                        <i class="fa fa-edit"></i> Güncelle
+                                    </a>
+                                    <a href="/Admin/Team/DeleteTeam/@item.Id"
+                                       class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Bu ekip üyesini silmek istiyor musunuz?');">
+                                        <i class="fa fa-trash"></i> Sil
+                                    </a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            }
+            else
+            {
+                <div class="alert alert-info text-center">
+                    📭 Henüz herhangi bir ekip üyesi eklenmemiş.
+                </div>
+            }
+        </div>
+    </div>
+</div>

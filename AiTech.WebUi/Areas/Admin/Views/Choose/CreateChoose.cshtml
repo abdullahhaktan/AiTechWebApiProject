@@ -1,0 +1,61 @@
+﻿@model CreateChooseDto
+
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-5">
+    <div class="card shadow-lg border-0 rounded-3">
+        <div class="card-header bg-warning text-dark text-center">
+            <h4 class="mb-0 fw-semibold">✏️ Yeni Seçenek Oluştur</h4>
+        </div>
+
+        <div class="card-body p-4">
+            <form method="post" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label asp-for="Title" class="form-label fw-semibold">Başlık</label>
+                    <input type="text" asp-for="Title" class="form-control" placeholder="Başlığı girin" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Description" class="form-label fw-semibold">Açıklama</label>
+                    <textarea asp-for="Description" class="form-control" placeholder="Açıklamayı girin"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Item1" class="form-label fw-semibold">Seçenek 1</label>
+                    <input type="text" asp-for="Item1" class="form-control" placeholder="Seçenek 1" />
+                    <span asp-validation-for="Item1" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Item2" class="form-label fw-semibold">Seçenek 2</label>
+                    <input type="text" asp-for="Item2" class="form-control" placeholder="Seçenek 2" />
+                    <span asp-validation-for="Item2" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Item3" class="form-label fw-semibold">Seçenek 3</label>
+                    <input type="text" asp-for="Item3" class="form-control" placeholder="Seçenek 3" />
+                    <span asp-validation-for="Item3" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="ImageUrl" class="form-label fw-semibold">Resim Yükle</label>
+                    <input type="file" asp-for="ImageUrl" class="form-control" />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary px-4 fw-semibold">
+                        <i class="fa fa-plus-circle me-1"></i> Oluştur
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

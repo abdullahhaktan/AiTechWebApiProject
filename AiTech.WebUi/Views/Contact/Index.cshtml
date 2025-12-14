@@ -1,0 +1,83 @@
+﻿@model CreateContactDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+@await Component.InvokeAsync("_UiLayoutHeadComponent")
+<body>
+    @await Component.InvokeAsync("_UiLayoutNavbarComponent")
+
+    <div class="container-fluid pt-5 bg-primary hero-header">
+        <div class="container pt-5">
+            <div class="row g-5 pt-5">
+                <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
+                    <h1 class="display-4 text-white mb-4 animated slideInRight">Bizimle İletişime Geç</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center justify-content-lg-start mb-0">
+                            <li class="breadcrumb-item"><a class="text-white" href="/Default/Index">Ana Sayfa</a></li>
+                            <li class="breadcrumb-item text-white active" aria-current="page">Bizimle İletişime Geç</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="col-lg-6 align-self-end text-center text-lg-end">
+                    <img class="img-fluid" src="/AI-html-1.0.0/" alt="" style="max-height: 300px;">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Bizimle İletişime Geç</div>
+                <h1 class="mb-4">Herhangi bir sorunuz varsa, lütfen bizimle iletişime geçin.</h1>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="wow fadeIn" data-wow-delay="0.3s">
+                        <form method="post">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" asp-for="Name" placeholder="Adınız">
+                                        <label for="Name">Adınız</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" asp-for="Email" placeholder="Mailiniz">
+                                        <label for="Email">Mail Adresiniz</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" 
+                                        asp-for="Subject" placeholder="Konu">
+                                        <label for="Subject">Konu</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" placeholder="Buraya bi mesaj bırak" asp-for="Message" style="height: 150px"></textarea>
+                                        <label for="message">Mesaj</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn btn-primary w-100 py-3" type="submit">Mesajı Gönder</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @await Component.InvokeAsync("_UiLayoutFooterComponent")
+    @await Component.InvokeAsync("_UiLayoutScriptComponent")
+</body>
+</html>

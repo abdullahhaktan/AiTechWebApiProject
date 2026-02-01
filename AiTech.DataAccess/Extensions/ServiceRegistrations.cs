@@ -19,12 +19,12 @@ namespace AiTech.DataAccess.Extensions
     {
         public static void AddDataAccessServices(this IServiceCollection services)
         {
-            services.AddScoped<ICategoryRepository,CategoryRepository>();
-            services.AddScoped<IProjectRepository,ProjectRepository>();
-            services.AddScoped<IBannerRepository,BannerRepository>();
-            services.AddScoped<IAboutRepository,AboutRepository>();
-            services.AddScoped<IAboutItemRepository,AboutItemRepository>();
-            services.AddScoped<ISocialRepository,SocialRepository>();
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProjectRepository, ProjectRepository>();
+            services.AddScoped<IBannerRepository, BannerRepository>();
+            services.AddScoped<IAboutRepository, AboutRepository>();
+            services.AddScoped<IAboutItemRepository, AboutItemRepository>();
+            services.AddScoped<ISocialRepository, SocialRepository>();
             services.AddScoped<IFeatureRepository, FeatureRepository>();
             services.AddScoped<IChooseRepository, ChooseRepository>();
             services.AddScoped<IFaqRepository, FaqRepository>();
@@ -32,7 +32,7 @@ namespace AiTech.DataAccess.Extensions
             services.AddScoped<ITestimonailRepository, TestimonialRepository>();
             services.AddScoped<IContactRepository, ContactRepository>();
 
-            services.AddScoped<IUnitOfWork , UnitOfWork>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }

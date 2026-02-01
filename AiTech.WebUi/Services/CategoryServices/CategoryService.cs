@@ -1,7 +1,6 @@
 ﻿using AiTech.WebUi.DTOs.CategoryDtos;
 using Newtonsoft.Json;
 using System.Text;
-using System.Text.Unicode;
 
 namespace AiTech.WebUi.Services.CategoryServices
 {
@@ -18,7 +17,7 @@ namespace AiTech.WebUi.Services.CategoryServices
         public async Task CreateAsync(CreateCategoryDto dto)
         {
             var json = JsonConvert.SerializeObject(dto);
-            var content = new StringContent(json, Encoding.UTF8,"application/json");
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
             await _client.PostAsync("categories", content);
         }
 
@@ -30,7 +29,7 @@ namespace AiTech.WebUi.Services.CategoryServices
         public async Task<List<ResultCategoryDto>> GetAllAsync()
         {
             var response = await _client.GetAsync("categories");
-            if(!response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
                 throw new Exception("Kategori Listesi Alınamadı");
             }
@@ -58,9 +57,9 @@ namespace AiTech.WebUi.Services.CategoryServices
         public async Task UpdateAsync(UpdateCategoryDto categoryDto)
         {
             var json = JsonConvert.SerializeObject(categoryDto);
-            var content = new StringContent(json,Encoding.UTF8,"application/json");
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
 
-            await _client.PutAsync("categories",content);
+            await _client.PutAsync("categories", content);
         }
     }
 }

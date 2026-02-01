@@ -1,6 +1,5 @@
 ﻿using AiTech.Businness.Services.CategoryServices;
 using AiTech.DTO.CategoryDtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AiTech.WebApi.Controllers

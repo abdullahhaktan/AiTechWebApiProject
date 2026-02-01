@@ -1,7 +1,6 @@
 ﻿using AiTech.Businness.Services.AboutItemServices;
 using AiTech.DataAccess.Repositories.AboutItemRepositories;
 using AiTech.DataAccess.UnitOfWorks;
-using AiTech.DTO.AboutDtos;
 using AiTech.DTO.AboutItemDtos;
 using AiTech.Entity.Entities;
 using Mapster;

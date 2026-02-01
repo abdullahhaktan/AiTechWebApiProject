@@ -1,6 +1,5 @@
 ﻿using AiTech.Businness.Services.ProjectServices;
 using AiTech.DTO.ProjectDtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AiTech.WebApi.Controllers
@@ -27,7 +26,7 @@ namespace AiTech.WebApi.Controllers
         public async Task<IActionResult> GetById(int id)
         {
             var project = await _projectService.TGetByIdAsync(id);
-            if(project == null)
+            if (project == null)
             {
                 return BadRequest("Proje bulunamadı");
             }

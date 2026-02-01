@@ -3,7 +3,7 @@ using AiTech.Entity.Entities;
 
 namespace AiTech.DataAccess.Repositories.FeatureRepositories
 {
-    public interface IFeatureRepository:IRepository<Feature>
+    public interface IFeatureRepository : IRepository<Feature>
     {
     }
 }

@@ -3,11 +3,6 @@ using AiTech.DataAccess.UnitOfWorks;
 using AiTech.DTO.ContactDtos;
 using AiTech.Entity.Entities;
 using Mapster;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AiTech.Businness.Services.ContactServices
 {

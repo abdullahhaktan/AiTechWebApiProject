@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AiTech.WebUi.Components.UiLayoutComponents
 {
-    public class _UiLayoutHeroComponent(IBannerService _bannerService) :ViewComponent
+    public class _UiLayoutHeroComponent(IBannerService _bannerService) : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {

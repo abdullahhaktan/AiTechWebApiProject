@@ -22,7 +22,7 @@ namespace AiTech.Businness.Services.CategoryServices
             if (category is null)
             {
                 throw new Exception("Silinecek kategori bulunamadı");
-            }   
+            }
 
             _categoryRepository.Delete(category);
             await _unitOfWork.SaveChangesAsync();

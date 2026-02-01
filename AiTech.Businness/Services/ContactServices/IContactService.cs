@@ -3,7 +3,7 @@ using AiTech.DTO.ContactDtos;
 
 namespace AiTech.Businness.Services.ContactServices
 {
-    public interface IContactService:IGenericService<ResultContactDto,CreateContactDto,UpdateContactDto>
+    public interface IContactService : IGenericService<ResultContactDto, CreateContactDto, UpdateContactDto>
     {
     }
 }

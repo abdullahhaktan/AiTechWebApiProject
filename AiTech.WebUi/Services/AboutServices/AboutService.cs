@@ -1,7 +1,4 @@
 ﻿using AiTech.WebUi.DTOs.AboutDtos;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Newtonsoft.Json;
-using System.Text;
 
 namespace AiTech.WebUi.Services.AboutServices
 {
@@ -39,7 +36,7 @@ namespace AiTech.WebUi.Services.AboutServices
         public async Task<UpdateAboutDto> GetByIdAsync(int id)
         {
             var value = await _client.GetFromJsonAsync<UpdateAboutDto>("abouts/" + id);
-            if(value == null)
+            if (value == null)
             {
                 return new UpdateAboutDto();
             }

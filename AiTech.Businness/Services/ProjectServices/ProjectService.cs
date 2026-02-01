@@ -26,7 +26,7 @@ namespace AiTech.Businness.Services.ProjectServices
         public async Task TDeleteAsync(int id)
         {
             var project = await _projectRepository.GetByIdAsync(id);
-            if(project == null)
+            if (project == null)
             {
                 throw new Exception("Proje Bulunamadı");
             }

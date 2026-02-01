@@ -1,5 +1,4 @@
-﻿using AiTech.Businness.Services.GenericServices;
-using AiTech.DataAccess.Repositories.TestimonialRepositories;
+﻿using AiTech.DataAccess.Repositories.TestimonialRepositories;
 using AiTech.DataAccess.UnitOfWorks;
 using AiTech.DTO.TestimonailDtos;
 using AiTech.Entity.Entities;

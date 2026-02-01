@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AiTech.Businness.Services.GenericServices
+﻿namespace AiTech.Businness.Services.GenericServices
 {
-    public interface IGenericService<TResultDto,TCreateDto,TUpdateDto>
+    public interface IGenericService<TResultDto, TCreateDto, TUpdateDto>
     {
         Task<List<TResultDto>> TGetAllAsync();
         Task<TResultDto> TGetByIdAsync(int id);

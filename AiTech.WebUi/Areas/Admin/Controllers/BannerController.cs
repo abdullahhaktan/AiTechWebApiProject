@@ -1,7 +1,6 @@
 ﻿using AiTech.WebUi.DTOs.BannerDtos;
 using AiTech.WebUi.Services.BannerServices;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 
 namespace AiTech.WebUi.Areas.Admin.Controllers
 {

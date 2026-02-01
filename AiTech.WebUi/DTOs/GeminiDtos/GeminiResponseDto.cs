@@ -2,7 +2,7 @@
 {
     public class GeminiResponseDto
     {
-        public List<Candidate> candidates {  get; set; }
+        public List<Candidate> candidates { get; set; }
     }
 
     public class Candidate

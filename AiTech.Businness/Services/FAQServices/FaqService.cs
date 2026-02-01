@@ -1,11 +1,8 @@
-﻿using AiTech.DataAccess.Context;
-using AiTech.DataAccess.Repositories.FAQRepositories;
-using AiTech.DataAccess.Repositories.GenericRepositories;
+﻿using AiTech.DataAccess.Repositories.FAQRepositories;
 using AiTech.DataAccess.UnitOfWorks;
 using AiTech.DTO.FAQDtos;
 using AiTech.Entity.Entities;
 using Mapster;
-using Microsoft.EntityFrameworkCore;
 
 namespace AiTech.Businness.Services.FAQServices
 {

@@ -2,7 +2,7 @@
 
 namespace AiTech.WebUi.Components.UiLayoutComponents
 {
-    public class _UiLayoutSpinnerComponent:ViewComponent
+    public class _UiLayoutSpinnerComponent : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {

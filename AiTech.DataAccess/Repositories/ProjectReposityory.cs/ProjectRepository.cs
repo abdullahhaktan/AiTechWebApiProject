@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AiTech.DataAccess.Repositories.ProjectReposityory.cs
 {
-    public class ProjectRepository:GenericRepository<Project> , IProjectRepository
+    public class ProjectRepository : GenericRepository<Project>, IProjectRepository
     {
         public ProjectRepository(AppDbContext _context) : base(_context)
         {
@@ -13,7 +13,7 @@ namespace AiTech.DataAccess.Repositories.ProjectReposityory.cs
 
         public async Task<List<Project>> GetProjectWithCategories()
         {
-            return await _context.Projects.AsNoTracking().Include(x=>x.Category).ToListAsync();
+            return await _context.Projects.AsNoTracking().Include(x => x.Category).ToListAsync();
         }
     }
 }

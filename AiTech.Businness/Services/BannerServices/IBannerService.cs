@@ -3,7 +3,7 @@ using AiTech.DTO.BannerDtos;
 
 namespace AiTech.Businness.Services.BannerServices
 {
-    public interface IBannerService:IGenericService<ResultBannerDto,CreateBannerDto,UpdateBannerDto>
+    public interface IBannerService : IGenericService<ResultBannerDto, CreateBannerDto, UpdateBannerDto>
     {
         Task TMakeActiveAsync(int id);
         Task TMakePasiveAsync(int id);

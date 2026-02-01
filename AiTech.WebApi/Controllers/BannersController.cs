@@ -1,6 +1,5 @@
 ﻿using AiTech.Businness.Services.BannerServices;
 using AiTech.DTO.BannerDtos;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AiTech.WebApi.Controllers

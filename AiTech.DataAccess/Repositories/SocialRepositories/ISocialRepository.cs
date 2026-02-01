@@ -3,7 +3,7 @@ using AiTech.Entity.Entities;
 
 namespace AiTech.DataAccess.Repositories.SocialRepositories
 {
-    public interface ISocialRepository:IRepository<Social>
+    public interface ISocialRepository : IRepository<Social>
     {
     }
 }

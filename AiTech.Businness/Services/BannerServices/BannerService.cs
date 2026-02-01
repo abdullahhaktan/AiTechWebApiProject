@@ -6,7 +6,7 @@ using Mapster;
 
 namespace AiTech.Businness.Services.BannerServices
 {
-    public class BannerService(IBannerRepository _bannerRepository , IUnitOfWork _unitOfWork) : IBannerService
+    public class BannerService(IBannerRepository _bannerRepository, IUnitOfWork _unitOfWork) : IBannerService
     {
         public async Task TCreateAsync(CreateBannerDto createdDto)
         {

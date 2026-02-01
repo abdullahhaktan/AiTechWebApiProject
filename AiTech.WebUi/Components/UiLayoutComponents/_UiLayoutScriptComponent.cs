@@ -2,7 +2,7 @@
 
 namespace AiTech.WebUi.Components.UiLayoutComponents
 {
-    public class _UiLayoutScriptComponent:ViewComponent
+    public class _UiLayoutScriptComponent : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {

@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 namespace AiTech.WebUi.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class ProjectController(IProjectService _projectService , ICategoryService _categoryService) : Controller
+    public class ProjectController(IProjectService _projectService, ICategoryService _categoryService) : Controller
     {
         private async Task GetCategoriesAsync()
         {
@@ -35,7 +35,7 @@ namespace AiTech.WebUi.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateProject(CreateProjectDto projectDto)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 await GetCategoriesAsync();
                 return View(projectDto);

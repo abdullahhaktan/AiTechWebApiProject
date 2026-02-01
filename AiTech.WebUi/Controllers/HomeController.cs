@@ -17,7 +17,7 @@ namespace AiTech.WebUi.Controllers
         public async Task<IActionResult> Index(string prompt)
         {
             var response = await _geminiService.GetGeminiDataAsync(prompt);
-            if(response != null)
+            if (response != null)
             {
                 ViewBag.response = response;
             }

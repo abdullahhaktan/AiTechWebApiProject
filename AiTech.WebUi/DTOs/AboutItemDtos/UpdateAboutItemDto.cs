@@ -1,6 +1,4 @@
-﻿using System.Runtime.InteropServices;
-
-namespace AiTech.WebUi.DTOs.AboutItemDtos
+﻿namespace AiTech.WebUi.DTOs.AboutItemDtos
 {
     public class UpdateAboutItemDto
     {

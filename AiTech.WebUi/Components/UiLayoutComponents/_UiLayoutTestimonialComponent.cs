@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AiTech.WebUi.Components.UiLayoutComponents
 {
-    public class _UiLayoutTestimonialComponent(ITestimonialService _testimonialService):ViewComponent
+    public class _UiLayoutTestimonialComponent(ITestimonialService _testimonialService) : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {

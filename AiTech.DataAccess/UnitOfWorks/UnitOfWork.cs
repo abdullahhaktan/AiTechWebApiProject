@@ -1,9 +1,4 @@
 ﻿using AiTech.DataAccess.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AiTech.DataAccess.UnitOfWorks
 {
@@ -11,7 +6,7 @@ namespace AiTech.DataAccess.UnitOfWorks
     {
         public async Task<bool> SaveChangesAsync()
         {
-           return await _context.SaveChangesAsync() > 0;
+            return await _context.SaveChangesAsync() > 0;
         }
     }
 }

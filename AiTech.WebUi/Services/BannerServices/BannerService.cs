@@ -35,7 +35,7 @@ namespace AiTech.WebUi.Services.BannerServices
 
         public async Task MakeActiveAsync(int id)
         {
-            await _client.PatchAsync("banners/makeActive/" + id,null);
+            await _client.PatchAsync("banners/makeActive/" + id, null);
         }
 
         public async Task MakePasiveAsync(int id)

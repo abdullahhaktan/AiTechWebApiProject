@@ -3,7 +3,7 @@ using AiTech.Entity.Entities;
 
 namespace AiTech.DataAccess.Repositories.TestimonialRepositories
 {
-    public interface ITestimonailRepository:IRepository<Testimonial>
+    public interface ITestimonailRepository : IRepository<Testimonial>
     {
     }
 }

@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AiTech.WebUi.Components.UiLayoutComponents
 {
-    public class _UiLayoutChooseComponent(IChooseService _chooseService):ViewComponent
+    public class _UiLayoutChooseComponent(IChooseService _chooseService) : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {

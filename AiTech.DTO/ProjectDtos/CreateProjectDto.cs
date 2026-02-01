@@ -1,7 +1,7 @@
 ﻿
 namespace AiTech.DTO.ProjectDtos
 {
-    public record CreateProjectDto( string Title,
+    public record CreateProjectDto(string Title,
                                     string ImageUrl,
                                     int CategoryId);
 }

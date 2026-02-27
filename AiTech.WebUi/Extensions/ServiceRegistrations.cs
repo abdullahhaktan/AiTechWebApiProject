@@ -20,6 +20,9 @@ namespace AiTech.WebUi.Extensions
             services.AddFluentValidationAutoValidation()
                 .AddFluentValidationClientsideAdapters()
                 .AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+            // CategoryValidator deki tüm validasyonları alır
+            //builder.Services.AddValidatorsFromAssemblyContaining<CategoryValidator>();
         }
     }
 }

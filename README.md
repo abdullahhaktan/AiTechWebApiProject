@@ -1,7 +1,7 @@
-# 🚀 AiTech API Project
+# 🤖 AiTech API Project
 
-[TR]
-**ASP.NET Core 8.0 ile Geliştirilmiş API-First Yaklaşımlı Yapay Zeka Entegreli Web API Projesi**
+> ASP.NET Core 8.0 ile geliştirilmiş, Gemini AI entegrasyonlu API-first yaklaşımlı RESTful Web API projesi.
+> A RESTful Web API project built with ASP.NET Core 8.0 using an API-first approach with Gemini AI integration.
 
 [![.NET Core](https://img.shields.io/badge/.NET_Core-8.0-purple.svg)](https://dotnet.microsoft.com/)
 [![C#](https://img.shields.io/badge/Language-C%23-blue.svg)](https://docs.microsoft.com/en-us/dotnet/csharp/)
@@ -10,101 +10,124 @@
 
 ---
 
-## 💻 Proje Hakkında
-AiTech API Project, modern yazılım geliştirme standartlarına uygun olarak **API-first yaklaşımı** ile geliştirilmiş bir **RESTful Web API** projesidir.  
+## 🚀 Özellikler / Features
 
-UI katmanı API’den tamamen bağımsız ayrı bir **client uygulama** olarak tasarlanmıştır ve tüm veri alışverişi HTTP istekleri üzerinden sağlanmaktadır. Proje; **temiz kod prensipleri**, **katmanlı mimari** ve **kurumsal yazılım desenleri** dikkate alınarak oluşturulmuştur.
-
----
-
-## ✨ Temel Özellikler
-
-### Mimari ve Teknolojiler
-* **ASP.NET Core 8.0 Web API** mimarisi ve **C#** dili kullanılarak geliştirilmiştir.
-* **N Katmanlı Mimari** uygulanmıştır (Business, Data Access, API).
-* **RESTful API** standartlarına uygun yapı.
-* HTTP metodları: **GET, POST, PUT, DELETE, PATCH**
-* **Entity Framework Core – Code First** yaklaşımı kullanılmıştır.
-* **Unit of Work Pattern** ile transaction yönetimi sağlanmıştır.
-
-### İşlevsel Özellikler ve Tasarım
-* **Bağımsız Katmanlar:** API ve UI katmanları tamamen ayrık yapıdadır.
-* **Veri Yönetimi:** **DTO & AutoMapper** ile güvenli veri transferi, **Fluent Validation** ile merkezi doğrulama.
-* **Gevşek Bağlılık:** **Dependency Injection** kullanımı.
-* **Otomasyon:** **Interceptor** yapısı ile `CreatedDate` ve `UpdatedDate` alanlarına otomatik atama.
-* **Güvenlik:** Rol bazlı yetkilendirme (Admin) ve **Area** yapısı ile ayrıştırılmış admin işlemleri.
-* **Yapay Zeka:** **Gemini AI entegrasyonu** ile yapay zeka destekli soru-cevap özelliği.
+| 🇹🇷 Türkçe | 🇬🇧 English |
+|------------|------------|
+| N Katmanlı Mimari (Business, DataAccess, API) | N-Tier Architecture (Business, DataAccess, API) |
+| RESTful API — GET, POST, PUT, DELETE, PATCH | RESTful API — GET, POST, PUT, DELETE, PATCH |
+| Entity Framework Core — Code First | Entity Framework Core — Code First |
+| Unit of Work Pattern ile transaction yönetimi | Transaction management with Unit of Work Pattern |
+| DTO & AutoMapper ile güvenli veri transferi | Secure data transfer with DTO & AutoMapper |
+| Fluent Validation ile merkezi doğrulama | Centralized validation with Fluent Validation |
+| Interceptor ile otomatik tarih ataması | Automatic date assignment via Interceptors |
+| Rol tabanlı yetkilendirme & Area yapısı | Role-based authorization & Area structure |
+| **Gemini AI** entegrasyonlu soru-cevap | **Gemini AI** powered Q&A functionality |
+| API ve UI katmanları tamamen bağımsız | Fully decoupled API & UI layers |
 
 ---
 
-## 🚀 Nasıl Çalıştırılır?
+## 🏗️ Mimari / Architecture
 
-1.  **Projeyi Klonlama:**
-    ```bash
-    git clone [https://github.com/username/AiTechApiProject.git](https://github.com/username/AiTechApiProject.git)
-    cd AiTechApiProject
-    ```
-2.  **Bağlantı Dizesi Ayarı:**
-    * `appsettings.json` içindeki SQL Server bağlantı dizesini kendi ortamınıza göre güncelleyin.
-3.  **Veritabanı Kurulumu:**
-    * **Package Manager Console** üzerinden aşağıdaki komutları çalıştırın:
-    ```bash
-    add-migration InitialMigration
-    update-database
-    ```
-4.  **Projeyi Başlatma:**
-    * Visual Studio ile `.sln` dosyasını açın ve **F5** ile çalıştırın.
-
----
-
-[EN]
-
-# 🚀 AiTech API Project
-**API-First AI-Integrated Web API Project Developed with ASP.NET Core 8.0**
-
----
-
-## 💻 About the Project
-AiTech API Project is a **RESTful Web API** developed with an **API-first approach**, following modern software development standards.
-
-The UI layer is designed as a completely **independent client application**, and all data communication is handled via HTTP requests. The project is built based on **clean code principles**, **layered architecture**, and **enterprise design patterns**.
-
----
-
-## ✨ Core Features
-
-### Architecture and Technologies
-* Developed using **ASP.NET Core 8.0 Web API** and **C#**.
-* **N-Tier Architecture** (Business, Data Access, API).
-* Fully **RESTful API** compliant structure.
-* **Entity Framework Core – Code First** approach.
-* **Unit of Work Pattern** for transaction management.
-
-### Functional Features and Design
-* Fully decoupled **API–UI architecture**.
-* Secure and controlled data transfer with **DTO & AutoMapper**.
-* Centralized validation and business rules with **Fluent Validation**.
-* **Dependency Injection** for loose coupling.
-* **Interceptors** for automatic `CreatedDate` and `UpdatedDate` assignment.
-* **Role-based authorization** (Admin role).
-* **Gemini AI integration** for AI-powered Q&A functionality.
+```
+AiTechApiProject/
+├── AiTech.BusinessLayer/
+│   ├── Abstract/
+│   └── Concrete/
+│
+├── AiTech.DataAccessLayer/
+│   ├── Abstract/
+│   ├── Concrete/
+│   └── UnitOfWork/
+│
+├── AiTech.DtoLayer/
+│   └── Dtos/
+│
+├── AiTech.EntityLayer/
+│   └── Entities/
+│
+├── AiTech.WebApi/
+│   ├── Controllers/
+│   ├── Areas/
+│   │   └── Admin/
+│   └── appsettings.json
+│
+└── AiTech.WebUI/
+    ├── Controllers/
+    ├── Views/
+    └── wwwroot/
+```
 
 ---
 
-## 🚀 How to Run
+## 🔄 API — UI İletişimi / API — UI Communication
 
-1.  **Clone the Project:**
-    ```bash
-    git clone [https://github.com/username/AiTechApiProject.git](https://github.com/username/AiTechApiProject.git)
-    cd AiTechApiProject
-    ```
-2.  **Configure Connection String:**
-    * Update the connection string in `appsettings.json` to match your local SQL Server.
-3.  **Database Migration:**
-    * Run the following commands in **Package Manager Console**:
-    ```bash
-    add-migration InitialMigration
-    update-database
-    ```
-4.  **Start the Project:**
-    * Open the `.sln` file in Visual Studio and press **F5**.
+UI katmanı, API'ye `HttpClient` üzerinden HTTP istekleri atar. Hiçbir entity doğrudan UI'ye taşınmaz; tüm veri alışverişi DTO'lar aracılığıyla gerçekleşir. Interceptor yapısı `CreatedDate` ve `UpdatedDate` alanlarını otomatik olarak yönetir.
+
+The UI layer communicates with the API via `HttpClient`. No entity is exposed directly to the UI; all data exchange is handled through DTOs. The Interceptor structure automatically manages `CreatedDate` and `UpdatedDate` fields.
+
+---
+
+## 🤖 Gemini AI Entegrasyonu / Gemini AI Integration
+
+Proje, **Google Gemini AI** entegrasyonu sayesinde yapay zeka destekli soru-cevap özelliği sunar. Kullanıcılar API üzerinden Gemini modeline sorgu gönderebilir ve anlık yanıt alabilir.
+
+The project offers AI-powered Q&A functionality through **Google Gemini AI** integration. Users can send queries to the Gemini model via the API and receive instant responses.
+
+---
+
+## 🛠️ Kullanılan Teknolojiler / Tech Stack
+
+| Katman / Layer | Teknoloji / Technology |
+|----------------|------------------------|
+| Backend API | ASP.NET Core 8.0 Web API |
+| UI | ASP.NET Core MVC |
+| ORM | Entity Framework Core (Code First) |
+| Veritabanı / Database | SQL Server |
+| Nesne Mapleme / Mapping | AutoMapper |
+| Doğrulama / Validation | Fluent Validation |
+| Yapay Zeka / AI | Google Gemini AI |
+| Dil / Language | C# |
+
+---
+
+## ⚙️ Kurulum / Setup
+
+### Gereksinimler / Requirements
+- .NET 8 SDK
+- SQL Server
+- Visual Studio 2022+
+
+### Adımlar / Steps
+
+```bash
+# Repoyu klonla / Clone the repo
+git clone https://github.com/abdullahhaktan/AiTechApiProject.git
+cd AiTechApiProject
+```
+
+**`appsettings.json` — Bağlantı dizesini güncelle / Update connection string:**
+
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=.;Database=AiTechDb;Trusted_Connection=True;"
+  }
+}
+```
+
+```bash
+# Package Manager Console üzerinden / Via Package Manager Console
+add-migration InitialMigration
+update-database
+```
+
+> Projeyi Visual Studio ile açıp **F5** ile başlatın.
+> Open the project in Visual Studio and press **F5** to run.
+
+---
+
+## 👨‍💻 Geliştirici / Developer
+
+**Abdullah Haktan**
+GitHub → [abdullahhaktan](https://github.com/abdullahhaktan)
